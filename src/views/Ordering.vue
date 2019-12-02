@@ -117,7 +117,7 @@ export default {
     placeOrder: function () {
       // make use of socket.io's magic to send the stuff to the kitchen via the server (app.js)
       this.$store.state.socket.emit('order', this.currentOrder);
-      this.currentOrder = [];
+      this.currentOrder.burgers = [];
       this.category = 1;
     },
     nextCategory: function() {
